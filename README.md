@@ -1,4 +1,9 @@
 # simple-calculator
 A simple calculator as a mean to brush up for some frontend developing skills with HTML, CSS, and JavaScript. 
-This needs to be completed still
+
+TODO:
+need to make it look like the apple calculator
+- change the colors
+- make sure the output does not go out the box
+- add more features
 
