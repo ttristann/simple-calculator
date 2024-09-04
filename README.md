@@ -6,4 +6,4 @@ need to make it look like the apple calculator
 - change the colors
 - make sure the output does not go out the box
 - add more features
-
+- ADD THE DECIMAL FUNCTIONALITY IN ACCORDANCE TO RAE'S REQUEST
