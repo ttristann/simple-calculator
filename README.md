@@ -3,7 +3,6 @@ A simple calculator as a mean to brush up for some frontend developing skills wi
 
 TODO:
 need to make it look like the apple calculator
-- change the colors
 - make sure the output does not go out the box
-- add more features
-- ADD THE DECIMAL FUNCTIONALITY IN ACCORDANCE TO RAE'S REQUEST
+- ensure that the newly added features have the right functionality
+- try to align the 0 text to the other numbers 
