@@ -33,6 +33,11 @@ function handleSymbol(symbol){
             runningTotal = intbuf * -1;
             buffer = runningTotal;
             break;
+        case '%':
+            doublebuf = parseInt(buffer);
+            runningTotal = doublebuf / 100;
+            buffer = runningTotal;
+            break;
         case '+':
         case '−':
         case '×':
