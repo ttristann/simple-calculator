@@ -24,19 +24,22 @@ function handleSymbol(symbol){
             if (previousOperator === null){
                 return;
             }
-            flushOperation(parseInt(buffer));
+            flushOperation(parseFloat(buffer));
             previousOperator = null;
             buffer = runningTotal;
             break;
         case '+/-':
-            intbuf = parseInt(buffer);
+            intbuf = parseFloat(buffer);
             runningTotal = intbuf * -1;
             buffer = runningTotal;
             break;
         case '%':
-            doublebuf = parseInt(buffer);
+            doublebuf = parseFloat(buffer);
             runningTotal = doublebuf / 100;
             buffer = runningTotal;
+            break;
+        case '.':
+            buffer = buffer.concat('.');
             break;
         case '+':
         case '−':
@@ -51,7 +54,7 @@ function handleMath(symbol){
     if(buffer === '0') {
         return;
     }
-    const intBuffer = parseInt(buffer);
+    const intBuffer = parseFloat(buffer);
     if(runningTotal === 0){
         runningTotal = intBuffer;
     }
@@ -61,12 +64,6 @@ function handleMath(symbol){
     previousOperator = symbol;
     buffer = '0';
 }
-
-// function changeOperation(intbuffer){
-//     if(intbuffer > 0){
-//         runningTotal *= -1;
-//     }
-// }
 
 function flushOperation(intBuffer){
     if(previousOperator === '+'){
